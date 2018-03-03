@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/assets/fonts/soft-marshmallow.otf</file>
+        <file>resources/assets/img/background.png</file>
+        <file>resources/assets/img/button-quit.png</file>
+        <file>resources/assets/img/button-reset.png</file>
+        <file>resources/assets/img/title.png</file>
+        <file>resources/assets/img/button-next.png</file>
+        <file>resources/assets/img/button-settings.png</file>
+        <file>resources/assets/img/dialog.png</file>
+    </qresource>
+</RCC>
