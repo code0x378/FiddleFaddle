@@ -1,0 +1,66 @@
+TextWindow.BackgroundColor = "DarkGreen"
+TextWindow.ForegroundColor = "White"
+TextWindow.Clear() '  trick to change the console window to green bg
+
+level = 1
+score = 0
+total = 5
+
+question[1] = "What is the job title of the person in charge of the camera and lighting crews working on a film?"
+answers[1] = "1=Production_Manager;2=Cinematographer;3=Unit_Manager;4=Gaffer;"
+correctQuestion[1] = 2
+
+question[2]="What is a baby rabbit called?"
+answers[2]="1=Kitten;2=Pup;3=Rabee;4=Tuber"
+correctQuestion[2]=1
+
+question[3]="In January 1996 Bill Clinton challenged congress to 'Never, ever' do this again"
+answers[3]="1=Kiss_Monica;2=Kiss_Hilary;3=Shutdown_government;4=Run_for_re-election"
+correctQuestion[3]=3
+
+question[4]="This Mississippi capital was named for a general who later became president?"
+answers[4]="1=Topeka;2=Jackson;3=Richmond;4=Grant"
+correctQuestion[4]=3
+
+question[5]="This Honda minivan has a Homeric name"
+answers[5]="1=Ulysses;2=Troy;3=Spartan;4=Odyssey"
+correctQuestion[5]=4
+
+Sub displayHeader
+    TextWindow.WriteLine("")
+    TextWindow.WriteLine(" Fiddle Faddle")
+    TextWindow.WriteLine("")
+    TextWindow.WriteLine(" Level: " + level + " Score: " + score + "/" + total)
+    TextWindow.WriteLine("")  
+EndSub
+
+sub displayQuestion
+  
+    displayHeader()
+    
+    TextWindow.WriteLine(" " + question[ctr])
+    TextWindow.WriteLine("")
+    For i = 1 To 4
+      TextWindow.WriteLine("  " + i + " - " + answers[ctr][i])
+      TextWindow.WriteLine("")
+    EndFor
+    
+    TextWindow.Write(" > ")
+    answer = TextWindow.ReadNumber()
+    
+    if correctQuestion[ctr] = answer then
+      score = score + 1
+    EndIf
+    
+    TextWindow.Clear()
+EndSub
+
+For ctr = 1 To 5
+    displayQuestion()
+EndFor
+
+TextWindow.WriteLine("")
+TextWindow.WriteLine(" Game Over!")
+TextWindow.WriteLine("")
+TextWindow.WriteLine(" Your final score: " + score + "/" + total)
+TextWindow.WriteLine("")
