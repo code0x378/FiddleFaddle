@@ -1,0 +1,73 @@
+body {
+  margin: 10px;
+  padding: 0;
+  font-family: sans-serif;
+  background: #efefef;
+}
+
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+button {
+  background: #2aa39b;
+  color: #fff;
+  border: 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 0 10px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+#app {
+  max-width: 300px;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  background: #fff;
+}
+
+#navbar {
+  background: #2aa39b;
+  color: #fff;
+  padding: 10px;
+}
+
+#navbar a {
+  padding: 0 10px;
+  text-decoration: none;
+}
+
+#navbar a, #navbar a:focus, #navbar a:active {
+  color: #fff;
+}
+
+#score {
+  padding: 15px 10px;
+  font-weight: bold;
+}
+
+#score div {
+  float: left;
+  width: 50%;
+}
+
+#thescore {
+  text-align: right;
+}
+#questions {
+  padding: 20px 10px;
+}
+
+#question {
+  padding: 5px 0;
+}
+
+#buttonbar {
+  padding: 10px;
+  text-align: right;
+}
