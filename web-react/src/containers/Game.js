@@ -74,17 +74,17 @@ class Game extends Component {
     };
 
     submitGameHandler = () => {
-
-        console.log(this.state.selected);
-        console.log(this.state.questions[this.state.current].correct);
-
-        if(this.state.selected == this.state.questions[this.state.current].correct)
-            this.setState({score: this.state.score + 1, selected: -1})
-
-        if (this.state.current < this.state.questions.length - 1)
-            this.setState({current: this.state.current + 1})
-        else
+        if (this.state.current === this.state.questions.length - 1)
             this.resetState();
+        else {
+            const newState = {...this.state};
+            newState.current += 1;
+            if(this.state.selected == this.state.questions[this.state.current].correct) {
+                newState.score += 1;
+                newState.selected = -1;
+            }
+            this.setState(newState);
+        }
     };
 
     selectAnswerHandler = (event) => {
@@ -98,7 +98,7 @@ class Game extends Component {
     }
 
     clickHelpHandler = () => {
-        // just use something dumb until I add routing...
+        // just use something dumb
         alert('Copyright 2017 FattySmurff - A few rights reserved')
     }
 
